@@ -94,10 +94,8 @@
 
     .hero {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 32px;
-      align-items: center;
-      padding: 40px;
+      gap: 24px;
+      padding: 44px 40px;
       border: 1px solid #e5e7eb;
       border-radius: 24px;
       background: #ffffff;
@@ -105,15 +103,16 @@
     }
 
       .hero h1 {
-        font-size: clamp(32px, 6vw, 54px);
-        margin: 0 0 12px;
-        line-height: 1.1;
+        font-size: clamp(36px, 6vw, 56px);
+        margin: 0;
+        line-height: 1.12;
       }
 
       .hero p {
-        margin: 0 0 16px;
+        margin: 10px 0 0;
         color: #4b5563;
         font-size: 18px;
+        max-width: 760px;
       }
 
     .cta-group {
@@ -192,9 +191,18 @@
     }
 
     h2 {
-      font-size: 28px;
-      margin-bottom: 16px;
+      font-size: 30px;
+      margin: 0;
       color: var(--gray-900);
+    }
+
+    h3 {
+      margin: 0;
+      color: var(--gray-900);
+    }
+
+    p {
+      margin: 0;
     }
 
     .section-intro {
@@ -221,27 +229,9 @@
       padding: 18px;
       color: var(--gray-900);
       box-shadow: none;
-    }
-
-    .label {
-      display: inline-flex;
-      align-items: center;
+      display: grid;
       gap: 8px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: var(--gray-900);
     }
-
-    .label.purple { background: #ede9fe; }
-    .label.yellow { background: #fef3c7; }
-    .label.green { background: #d1fae5; }
-    .label.blue { background: #dbeafe; }
-    .label.orange { background: #ffedd5; }
-    .label.brown { background: #f5e6de; }
-    .label.black { background: #e5e7eb; }
 
     .steps {
       display: grid;
@@ -372,6 +362,8 @@
       border-radius: 12px;
       background: #ffffff;
       border: 1px solid #e5e7eb;
+      display: grid;
+      gap: 8px;
     }
 
     footer {
@@ -431,16 +423,13 @@
   <main>
     <section class="hero">
       <div>
-        <h1>Your Digital Wardrobe, Shared with Style</h1>
-        <p>Upload your clothes, organize by style, share with friends, and earn by renting. The peer-to-peer fashion platform built on trust.</p>
+        <h1>Style Smarter with AI. Wear More with Sharing.</h1>
+        <p>Your wardrobe, digitized. Your outfits, AI-curated. Your fashion, shared—not wasted.</p>
         <div class="video-embed">
           <iframe src="https://www.youtube.com/embed/WFpv5kiR_Oo?start=1" title="Joda Explainer Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="card">
-          <h2>Where Fashion Finds Its Match</h2>
-          <p>Visualize your wardrobe, share your style, and connect with your fashion twin — all in one secure platform built for real-world communities.</p>
-          <div class="pill">✨ Community-powered wardrobe</div>
-          <div class="pill">🔐 Trust-first sharing</div>
+        <div class="cta-group">
+          <button class="btn primary">👉 Get Early Access</button>
         </div>
         <div class="badges">
           <div class="badge">2,000+ early sign-ups</div>
@@ -451,15 +440,19 @@
     </section>
 
     <section>
-      <h2>Where Fashion Finds Its Match</h2>
-      <p class="section-intro">Visualize your wardrobe, share your style, and connect with your fashion twin — all in one secure platform built for real-world communities.</p>
+      <div class="section-header">
+        <h2>Where Fashion Finds Its Match</h2>
+        <p class="section-intro">Visualize your wardrobe, share your style, and connect with your fashion twin — all in one secure platform built for real-world communities.</p>
+      </div>
       <div class="pill">✨ Community-powered wardrobe</div>
       <div class="pill">🔐 Trust-first sharing</div>
     </section>
 
     <section>
-      <h2>A new way to experience fashion.</h2>
-      <p class="section-intro">Joda turns your wardrobe into a living, shareable ecosystem. Whether you're looking for fresh styles, want to earn from what you already own, or simply love sustainable fashion — this is for you.</p>
+      <div class="section-header">
+        <h2>A new way to experience fashion.</h2>
+        <p class="section-intro">Joda turns your wardrobe into a living, shareable ecosystem. Whether you're looking for fresh styles, want to earn from what you already own, or simply love sustainable fashion — this is for you.</p>
+      </div>
       <div class="cards">
         <div class="card">👗 Digitize your wardrobe with AI-powered tagging</div>
         <div class="card">🤝 Share or rent within trusted circles — friends, campuses, communities</div>
@@ -470,7 +463,9 @@
     </section>
 
     <section>
-      <h2>Simple steps to start sharing</h2>
+      <div class="section-header">
+        <h2>Simple steps to start sharing</h2>
+      </div>
       <div class="steps">
         <div class="card">
           <div class="step-number">1</div>
@@ -491,7 +486,9 @@
     </section>
 
     <section>
-      <h2>Stories from our first members</h2>
+      <div class="section-header">
+        <h2>Stories from our first members</h2>
+      </div>
       <div class="quotes">
         <blockquote>“I finally get to earn from clothes I barely used.”</blockquote>
         <blockquote>“It feels safe because I can restrict sharing to my apartment community.”</blockquote>
@@ -501,7 +498,9 @@
     </section>
 
     <section>
-      <h2>Designed for trust, ease, and sustainability</h2>
+      <div class="section-header">
+        <h2>Designed for trust, ease, and sustainability</h2>
+      </div>
       <div class="benefits">
         <div class="benefit">🔒 Trust First<br>Verified profiles, optional deposits, and safe handover checklists.</div>
         <div class="benefit">🚚 Seamless Logistics<br>Pickup/drop partnerships and optional cleaning add-ons.</div>
@@ -538,8 +537,10 @@
     </section>
 
     <section>
-      <h2>Where fashion meets connection.</h2>
-      <p class="section-intro">Whether you’re a student, young professional, creator, or sustainability lover — Joda is built for communities that care.</p>
+      <div class="section-header">
+        <h2>Where fashion meets connection.</h2>
+        <p class="section-intro">Whether you’re a student, young professional, creator, or sustainability lover — Joda is built for communities that care.</p>
+      </div>
       <div class="community-list">
         <div class="card">College campuses</div>
         <div class="card">Housing societies</div>
@@ -552,7 +553,9 @@
     </section>
 
     <section>
-      <h2>Questions, answered.</h2>
+      <div class="section-header">
+        <h2>Questions, answered.</h2>
+      </div>
       <div class="faq">
         <div class="faq-item">
           <h3>Is sharing safe?</h3>
