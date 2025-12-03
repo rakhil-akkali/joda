@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joda | Where Fashion Finds Its Match</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Joda is India’s first community-driven digital wardrobe — digitize your closet, share or rent styles, and find your perfect fashion match in trusted communities.">
+  <meta name="keywords" content="Joda, wardrobe sharing, fashion sharing, fashion rental, circular fashion, sustainable fashion, Bangalore, Bengaluru, India">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Joda | Where Fashion Finds Its Match">
+  <meta property="og:description" content="Wear. Share. Match. Digitize your wardrobe, share within trusted circles, and find your style twin.">
+  <meta property="og:type" content="website">
+  <!-- Replace with your production URL once you know it -->
+  <meta property="og:url" content="https://your-site.vercel.app/">
+  <!-- Replace with a real image if you add one -->
+  <meta property="og:image" content="https://your-site.vercel.app/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Joda | Where Fashion Finds Its Match">
+  <meta name="twitter:description" content="Discover India’s first community-driven digital wardrobe — where you can digitize your closet, share or rent styles, and find your perfect fashion match.">
+  <meta name="twitter:image" content="https://your-site.vercel.app/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --purple: #6c4df6;
+      --deep-purple: #20124d;
+      --yellow: #fbc02d;
+      --green: #1dbf73;
+      --blue: #1c8bf4;
+      --orange: #ff8a00;
+      --text: #1f1f1f;
+      --muted: #4f4f4f;
+      --bg: #f7f6fb;
+      --card: #ffffff;
+      --border: #e6e4ed;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    header, main, footer { width: 100%; }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .hero {
+      background: radial-gradient(circle at 10% 20%, rgba(108, 77, 246, 0.16), transparent 25%),
+                  radial-gradient(circle at 90% 10%, rgba(252, 204, 77, 0.18), transparent 20%),
+                  linear-gradient(145deg, #120c2c 0%, #1e1444 50%, #2c1b5c 100%);
+      color: #f7f6fb;
+      padding: 72px 24px 96px;
+      border-radius: 0 0 32px 32px;
+      box-shadow: 0 18px 42px rgba(15, 12, 34, 0.35);
+    }
+
+    .hero .page { padding-bottom: 0; }
+
+    .tagline {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 5vw, 56px);
+      margin: 0 0 12px;
+      line-height: 1.1;
+    }
+
+    .subhead {
+      font-size: 18px;
+      max-width: 720px;
+      color: rgba(247, 246, 251, 0.85);
+      margin-bottom: 24px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 18px;
+      font-weight: 700;
+      border-radius: 12px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      font-size: 16px;
+    }
+
+    .btn-primary {
+      background: #fbc02d;
+      color: #20124d;
+      box-shadow: 0 12px 28px rgba(252, 192, 45, 0.35);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: #f7f6fb;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .badges {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+      max-width: 840px;
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 14px;
+      font-weight: 600;
+      color: #f7f6fb;
+    }
+
+    .section {
+      margin-top: 80px;
+      padding: 0;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .section p.lead {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 780px;
+      margin-bottom: 24px;
+    }
+
+    .value-cards, .feature-grid, .quotes, .how-steps, .community-grid, .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px 18px 16px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+    }
+
+    .card h3 { margin: 0 0 8px; }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #fef7e0;
+      color: #8a6400;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      margin-bottom: 8px;
+    }
+
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .list li {
+      display: flex;
+      gap: 8px;
+      color: var(--muted);
+      align-items: flex-start;
+    }
+
+    .list li span.icon { font-size: 18px; }
+
+    .steps {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: #ede9ff;
+      color: var(--purple);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-top: 4px;
+    }
+
+    .quote {
+      background: var(--card);
+      border-left: 4px solid var(--purple);
+      padding: 16px;
+      border-radius: 12px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .feature-grid .card {
+      border-top: 4px solid var(--purple);
+    }
+
+    .waitlist {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      align-items: start;
+    }
+
+    form {
+      display: grid;
+      gap: 12px;
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      font-size: 15px;
+      font-family: inherit;
+      background: #fff;
+    }
+
+    .survey-banner {
+      background: linear-gradient(135deg, #6c4df6, #5ab2f0);
+      color: #fff;
+      padding: 22px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .community-grid .card, .faq-grid .card { border-top: 4px solid #1c8bf4; }
+
+    .footer {
+      margin-top: 80px;
+      padding: 32px 0 48px;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 12px 0; }
+
+    .footer strong { color: var(--text); }
+
+    @media (max-width: 600px) {
+      .hero { padding: 56px 18px 72px; }
+      .hero-ctas { flex-direction: column; align-items: flex-start; }
+      .survey-banner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="page">
+      <div class="tagline">⭐ JODA · Where Fashion Finds Its Match</div>
+      <h1>Wear. Share. Match.</h1>
+      <p class="subhead">Discover India’s first community-driven digital wardrobe — where you can digitize your closet, share or rent styles, and find your perfect fashion match.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#waitlist">👉 Get Early Access</a>
+        <a class="btn btn-secondary" href="#explainer">🎥 Watch Explainer Video</a>
+      </div>
+      <div class="badges">
+        <div class="badge">2,000+ early sign-ups</div>
+        <div class="badge">Built for trusted communities</div>
+        <div class="badge">Circular fashion movement</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="section" id="value">
+      <div class="pill">🟡 A new way to experience fashion.</div>
+      <h2>Joda turns your wardrobe into a living, shareable ecosystem.</h2>
+      <p class="lead">Whether you're looking for fresh styles, want to earn from what you already own, or simply love sustainable fashion — this is for you.</p>
+      <div class="value-cards">
+        <div class="card">
+          <h3>Why Joda?</h3>
+          <ul class="list">
+            <li><span class="icon">👗</span><span>Digitize your wardrobe with AI-powered tagging</span></li>
+            <li><span class="icon">🤝</span><span>Share or rent within trusted circles — friends, campuses, communities</span></li>
+            <li><span class="icon">✨</span><span>Find your fashion match with style-based discovery</span></li>
+            <li><span class="icon">♻️</span><span>Wear sustainably and reduce waste</span></li>
+            <li><span class="icon">💰</span><span>Earn effortlessly from underused outfits</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="pill" style="background:#e5f6ed;color:#0a8248;">🟢 How It Works</div>
+      <div class="how-steps">
+        <div class="card steps">
+          <div class="step-number">1</div>
+          <div>
+            <h3>Digitize Your Closet</h3>
+            <p>Upload a photo, and Joda automatically tags your outfit by category, color, and style.</p>
+          </div>
+        </div>
+        <div class="card steps">
+          <div class="step-number">2</div>
+          <div>
+            <h3>Share or Rent What You Love</h3>
+            <p>Choose who can see your wardrobe — friends, campus, neighborhood, or the entire Joda community.</p>
+          </div>
+        </div>
+        <div class="card steps">
+          <div class="step-number">3</div>
+          <div>
+            <h3>Match With Your Style Twin</h3>
+            <p>Discover users who share your vibe — curated looks, recommended matches, and shared fashion inspiration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="love">
+      <div class="pill" style="background:#e7f0ff;color:#1c4fb4;">🔵 Why People Love Joda</div>
+      <div class="quotes">
+        <div class="quote">“I finally get to earn from clothes I barely used.”</div>
+        <div class="quote">“It feels safe because I can restrict sharing to my apartment community.”</div>
+        <div class="quote">“Such a fun way to explore styles without buying constantly.”</div>
+      </div>
+      <p class="lead">Add real user stories as you gather testimonials.</p>
+    </section>
+
+    <section class="section" id="benefits">
+      <div class="pill" style="background:#f4e3ff;color:#7b2cbf;">🟤 Featured Benefits</div>
+      <div class="feature-grid">
+        <div class="card">
+          <h3>🔒 Trust First</h3>
+          <p>Verified profiles, optional deposits, and safe handover checklists.</p>
+        </div>
+        <div class="card">
+          <h3>🚚 Seamless Logistics</h3>
+          <p>Pickup/drop partnerships and optional cleaning add-ons.</p>
+        </div>
+        <div class="card">
+          <h3>🎯 Hyper-Local Discovery</h3>
+          <p>Find matches within your campus, apartment, or city cluster.</p>
+        </div>
+        <div class="card">
+          <h3>🌱 Sustainable Fashion</h3>
+          <p>Reduce waste. Extend garment life. Share with purpose.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="waitlist">
+      <div class="pill" style="background:#fff2e5;color:#b45b00;">🟠 Early Access Waitlist</div>
+      <h2>Be part of the first 1,000 members to try Joda.</h2>
+      <p class="lead">We’re launching city-by-city, starting with Bengaluru. Join the early access list to unlock priority invites, exclusive perks, and community access.</p>
+      <div class="waitlist">
+        <!-- Added id to hook JS handler -->
+        <form id="waitlist-form">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+          </div>
+          <div>
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" placeholder="Bengaluru" required>
+          </div>
+          <div>
+            <label for="reason">Your top reason for joining Joda</label>
+            <select id="reason" name="reason" required>
+              <option value="" disabled selected>Select a reason</option>
+              <option>Discover new styles</option>
+              <option>Earn from my wardrobe</option>
+              <option>Share within my community</option>
+              <option>Support sustainable fashion</option>
+              <option>Curious to try</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" aria-label="Join the waitlist">👉 Join the Waitlist</button>
+          <small style="color: var(--muted);">“No spam. You’ll only receive launch updates.”</small>
+        </form>
+        <div class="card" id="explainer">
+          <h3>Why join early?</h3>
+          <ul class="list">
+            <li><span class="icon">⭐</span><span>Priority invites as we open new neighborhoods</span></li>
+            <li><span class="icon">🎁</span><span>Exclusive perks for founding members</span></li>
+            <li><span class="icon">🧭</span><span>Help shape the roadmap with direct feedback loops</span></li>
+            <li><span class="icon">🤝</span><span>Be part of a trusted community from day one</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="survey">
+      <div class="survey-banner">
+        <div>
+          <div class="pill" style="background:rgba(255,255,255,0.15);color:#fff;">🟣 Customer Discovery Survey</div>
+          <h3 style="margin: 6px 0 8px;">Help us shape the future of Joda.</h3>
+          <p style="margin:0;max-width:640px;">This 2-minute survey helps us build the right features for your community.</p>
+        </div>
+        <a class="btn btn-secondary" href="#">👉 Take the 2-Minute Survey</a>
+      </div>
+    </section>
+
+    <section class="section" id="community">
+      <div class="pill" style="background:#e0f2ff;color:#0a5ba8;">⚫ Community Section</div>
+      <h2>Where fashion meets connection.</h2>
+      <p class="lead">Whether you’re a student, young professional, creator, or sustainability lover — Joda is built for communities that care.</p>
+      <h3>Perfect For:</h3>
+      <div class="community-grid">
+        <div class="card">College campuses</div>
+        <div class="card">Housing societies</div>
+        <div class="card">Corporate groups</div>
+        <div class="card">Creator & influencer circles</div>
+      </div>
+      <div style="margin-top:18px;">
+        <a class="btn btn-primary" href="#">Partner with Us</a>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="pill" style="background:#ffe5e5;color:#b40a0a;">🟥 FAQ</div>
+      <div class="faq-grid">
+        <div class="card">
+          <h3>Is sharing safe?</h3>
+          <p>Yes. Profiles are verified, deposits are optional, and we support safe logistics and cleaning.</p>
+        </div>
+        <div class="card">
+          <h3>How does earning work?</h3>
+          <p>You set your rental price. Joda processes payment and ensures smooth handover.</p>
+        </div>
+        <div class="card">
+          <h3>Do I have to share everything?</h3>
+          <p>No — you choose which items (if any) you want to share.</p>
+        </div>
+        <div class="card">
+          <h3>Is Joda a rental platform?</h3>
+          <p>It’s more than that: a trusted wardrobe community.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><strong>JODA</strong> · Where Fashion Finds Its Match</div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <div>© 2025 Joda Labs. All rights reserved.</div>
+  </footer>
+
+  <!-- Simple front-end waitlist handler -->
+  <script>
+    (function () {
+      const form = document.getElementById('waitlist-form');
+      if (!form) return;
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        // TODO: replace this with a real API call when backend is ready.
+        console.log('Waitlist submission:', data);
+
+        alert("You’re on the list! We’ll reach out when Joda launches in your city. 💜");
+        form.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
