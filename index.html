@@ -7,36 +7,30 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1100PFWXT8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1100PFWXT8');
-</script>  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1100PFWXT8"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-1100PFWXT8');
   </script>
   <style>
     :root {
-      --purple: #7c3aed;
-      --yellow: #f59e0b;
-      --green: #10b981;
-      --blue: #2563eb;
-      --orange: #f97316;
-      --brown: #8b5e3c;
-      --gray-900: #0f172a;
-      --gray-700: #334155;
-      --gray-200: #e2e8f0;
-      --bg: #0b1021;
-      --card: #11162a;
-      --accent: linear-gradient(135deg, #7c3aed, #2563eb);
+      --purple: #cdb4f9;
+      --yellow: #fde68a;
+      --green: #b7f9d0;
+      --blue: #c7d2fe;
+      --orange: #ffd9b5;
+      --brown: #d7c3ad;
+      --gray-900: #1f2937;
+      --gray-700: #4b5563;
+      --gray-200: #e5e7eb;
+      --bg: linear-gradient(180deg, #fdfaf5 0%, #f3f6ff 100%);
+      --card: #ffffff;
+      --accent: linear-gradient(135deg, #cdb4f9 0%, #a5d8ff 100%);
+      --accent-strong: #9b8bf4;
+      --border-soft: #e9e5f3;
     }
 
     * {
@@ -46,10 +40,8 @@
     body {
       margin: 0;
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.15), transparent 25%),
-                  radial-gradient(circle at 80% 10%, rgba(37, 99, 235, 0.15), transparent 20%),
-                  var(--bg);
-      color: #f8fafc;
+      background: var(--bg);
+      color: var(--gray-900);
       line-height: 1.6;
     }
 
@@ -60,9 +52,8 @@
       justify-content: space-between;
       position: sticky;
       top: 0;
-      backdrop-filter: blur(14px);
-      background: rgba(11, 16, 33, 0.6);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-soft);
       z-index: 100;
     }
 
@@ -71,60 +62,62 @@
       font-size: 40px;
       letter-spacing: 1px;
       text-transform: uppercase;
-      color: #fff;
+      color: var(--gray-900);
     }
 
     .subtext {
-      color: #cbd5e1;
+      color: #6b7280;
       font-size: 14px;
     }
 
     .header-cta {
-      background: var(--accent);
+      background: var(--accent-strong);
       padding: 10px 16px;
       border-radius: 999px;
-      color: #fff;
+      color: #ffffff;
       text-decoration: none;
       font-weight: 600;
-      box-shadow: 0 10px 25px rgba(124, 58, 237, 0.35);
+      box-shadow: 0 12px 28px rgba(155, 139, 244, 0.25);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .header-cta:hover {
       transform: translateY(-1px);
-      box-shadow: 0 15px 30px rgba(124, 58, 237, 0.45);
+      box-shadow: 0 10px 20px rgba(155, 139, 244, 0.3);
     }
 
     main {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 32px 24px 64px;
+      padding: 48px 24px 88px;
+      display: grid;
+      gap: 56px;
     }
 
     .hero {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 32px;
-      align-items: center;
-      padding: 48px;
-      border: 1px solid rgba(148, 163, 184, 0.2);
+      gap: 24px;
+      padding: 52px 48px;
+      border: 1px solid var(--border-soft);
       border-radius: 24px;
-      background: radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.15), transparent 30%),
-                  radial-gradient(circle at 10% 10%, rgba(245, 158, 11, 0.15), transparent 25%),
-                  rgba(17, 22, 42, 0.85);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+      background: linear-gradient(180deg, #ffffff 0%, #f9f5ff 100%);
+      box-shadow: 0 16px 40px rgba(142, 126, 227, 0.15);
     }
 
     .hero h1 {
-      font-size: clamp(32px, 6vw, 54px);
-      margin: 0 0 12px;
+      font-size: clamp(38px, 6vw, 58px);
+      margin: 0;
       line-height: 1.1;
+      letter-spacing: -0.02em;
     }
 
     .hero p {
-      margin: 0 0 16px;
-      color: #cbd5e1;
-      font-size: 18px;
+      margin: 8px 0 0;
+      color: #475569;
+      font-size: 20px;
+      line-height: 1.75;
+      width: 100%;
+      max-width: none;
     }
 
     .cta-group {
@@ -146,30 +139,29 @@
 
     .btn.primary {
       background: var(--accent);
-      color: white;
-      box-shadow: 0 12px 30px rgba(124, 58, 237, 0.4);
+      color: #2f1b5f;
+      box-shadow: 0 12px 28px rgba(155, 139, 244, 0.25);
     }
 
     .btn.secondary {
-      background: rgba(255,255,255,0.1);
-      color: #e2e8f0;
-      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: #f7f0ff;
+      color: #2f1b5f;
+      border: 1px solid var(--border-soft);
     }
 
     .btn:hover {
       transform: translateY(-1px);
+      box-shadow: 0 12px 22px rgba(147, 112, 219, 0.18);
     }
 
     .video-embed {
       position: relative;
-      margin-top: 20px;
       width: 100%;
-      max-width: 560px;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-      border: 1px solid rgba(148, 163, 184, 0.25);
-      background: #000;
+      box-shadow: 0 12px 28px rgba(155, 139, 244, 0.18);
+      border: 1px solid var(--border-soft);
+      background: #f7f5ff;
       aspect-ratio: 16 / 9;
     }
 
@@ -185,74 +177,87 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 12px;
-      margin-top: 16px;
+      margin-top: 18px;
     }
 
     .badge {
       padding: 12px;
       border-radius: 10px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(148, 163, 184, 0.2);
-      color: #e2e8f0;
+      background: linear-gradient(135deg, #fdf2ff 0%, #eef7ff 100%);
+      border: 1px solid var(--border-soft);
+      color: #1f2937;
       font-weight: 600;
     }
 
     section {
-      margin-top: 56px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, #ffffff 0%, #f5f3ff 100%);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      padding: 36px 38px;
+      box-shadow: 0 18px 36px rgba(147, 112, 219, 0.12);
+      display: grid;
+      gap: 20px;
     }
 
     h2 {
-      font-size: 28px;
-      margin-bottom: 16px;
-      color: #fff;
+      font-size: 30px;
+      margin: 0;
+      color: var(--gray-900);
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      margin: 0;
+      color: var(--gray-900);
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin: 0;
+      color: #475569;
+      line-height: 1.7;
     }
 
     .section-intro {
-      color: #cbd5e1;
-      max-width: 760px;
+      color: #475569;
+      line-height: 1.7;
+      width: 100%;
+      max-width: none;
+    }
+
+    .section-header {
+      display: grid;
+      gap: 10px;
+      width: 100%;
+      max-width: none;
     }
 
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 16px;
-      margin-top: 24px;
     }
 
     .card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(148, 163, 184, 0.18);
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border: 1px solid var(--border-soft);
       border-radius: 16px;
       padding: 18px;
-      color: #e2e8f0;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-    }
-
-    .label {
-      display: inline-flex;
-      align-items: center;
+      color: var(--gray-900);
+      box-shadow: none;
+      display: grid;
       gap: 8px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: #0b1021;
     }
-
-    .label.purple { background: #ede9fe; }
-    .label.yellow { background: #fef3c7; }
-    .label.green { background: #d1fae5; }
-    .label.blue { background: #dbeafe; }
-    .label.orange { background: #ffedd5; }
-    .label.brown { background: #f5e6de; }
-    .label.black { background: #e5e7eb; }
 
     .steps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 16px;
-      margin-top: 24px;
     }
 
     .step-number {
@@ -262,7 +267,7 @@
       place-items: center;
       border-radius: 12px;
       background: var(--accent);
-      color: #fff;
+      color: #2f1b5f;
       font-weight: 800;
       margin-bottom: 12px;
     }
@@ -271,43 +276,55 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 16px;
-      margin-top: 24px;
     }
 
     blockquote {
       margin: 0;
       padding: 16px;
-      background: rgba(255,255,255,0.04);
+      background: linear-gradient(135deg, #f8f0ff 0%, #eef7ff 100%);
       border-left: 4px solid var(--purple);
       border-radius: 12px;
-      color: #e2e8f0;
+      color: #1f2937;
       font-style: italic;
     }
 
     .benefits {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px;
-      margin-top: 24px;
+      gap: 16px;
     }
 
     .benefit {
       padding: 16px;
       border-radius: 14px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(148, 163, 184, 0.18);
+      background: #f7fef7;
+      border: 1px solid #d6f3df;
     }
 
     .waitlist {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
-      align-items: center;
-      padding: 32px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(37, 99, 235, 0.15));
-      border: 1px solid rgba(124, 58, 237, 0.3);
-      box-shadow: 0 18px 45px rgba(37, 99, 235, 0.25);
+    }
+
+    .google-form {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 12px 28px rgba(155, 139, 244, 0.12);
+      background: #ffffff;
+    }
+
+    .google-form iframe {
+      width: 100%;
+      height: 971px;
+      border: 0;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
     }
 
     form {
@@ -326,7 +343,7 @@
 
     label {
       font-weight: 600;
-      color: #e2e8f0;
+      color: #475569;
       font-size: 14px;
     }
 
@@ -337,21 +354,21 @@
     input, select {
       padding: 12px;
       border-radius: 10px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      background: rgba(11, 16, 33, 0.6);
-      color: #fff;
+      border: 1px solid var(--border-soft);
+      background: #ffffff;
+      color: var(--gray-900);
     }
 
     .consent {
       font-size: 13px;
-      color: #cbd5e1;
+      color: #6b7280;
     }
 
     .survey {
       padding: 24px;
       border-radius: 16px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(148, 163, 184, 0.18);
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -366,29 +383,29 @@
     .community-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px;
-      margin-top: 16px;
+      gap: 16px;
     }
 
     .faq {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 12px;
-      margin-top: 16px;
+      gap: 16px;
     }
 
     .faq-item {
       padding: 16px;
       border-radius: 12px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(148, 163, 184, 0.18);
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      display: grid;
+      gap: 8px;
     }
 
     footer {
       margin-top: 56px;
       padding: 32px 0 24px;
-      border-top: 1px solid rgba(148, 163, 184, 0.2);
-      color: #cbd5e1;
+      border-top: 1px solid var(--border-soft);
+      color: #6b7280;
       display: grid;
       gap: 8px;
     }
@@ -397,26 +414,27 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      color: #e2e8f0;
+      color: var(--gray-900);
     }
 
     .footer-links a {
-      color: #cbd5e1;
+      color: #475569;
       text-decoration: none;
-      border-bottom: 1px dotted rgba(148, 163, 184, 0.4);
+      border-bottom: 1px dotted var(--border-soft);
     }
 
     .pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 12px;
+      padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(148, 163, 184, 0.2);
+      background: linear-gradient(135deg, #fef6ff 0%, #f1f8ff 100%);
+      border: 1px solid var(--border-soft);
       font-weight: 600;
-      color: #e2e8f0;
+      color: #1f2937;
       margin-top: 12px;
+      line-height: 1.5;
     }
 
     @media (max-width: 640px) {
@@ -441,12 +459,8 @@
   <main>
     <section class="hero">
       <div>
-        <div class="label purple">🟣 Hero</div>
-        <h1>Your Digital Wardrobe, Shared with Style</h1>
-        <p>Upload your clothes, organize by style, share with friends, and earn by renting. The peer-to-peer fashion platform built on trust.</p>
-        <div class="cta-group">
-          <button class="btn primary">👉 Get Early Access</button>
-        </div>
+        <h1>Style Smarter with AI.<br>Wear More with Sharing.</h1>
+        <p>Your wardrobe, digitized. Your outfits, AI-curated. Your fashion, shared—not wasted.</p>
         <div class="video-embed">
           <iframe src="https://www.youtube.com/embed/WFpv5kiR_Oo?start=1" title="Joda Explainer Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -456,18 +470,22 @@
           <div class="badge">Circular fashion movement</div>
         </div>
       </div>
-      <div class="card">
-        <h2>Where Fashion Finds Its Match</h2>
-        <p>Visualize your wardrobe, share your style, and connect with your fashion twin — all in one secure platform built for real-world communities.</p>
-        <div class="pill">✨ Community-powered wardrobe</div>
-        <div class="pill">🔐 Trust-first sharing</div>
-      </div>
     </section>
 
-    <section>
-      <div class="label yellow">🟡 Value Proposition</div>
-      <h2>A new way to experience fashion.</h2>
-      <p class="section-intro">Joda turns your wardrobe into a living, shareable ecosystem. Whether you're looking for fresh styles, want to earn from what you already own, or simply love sustainable fashion — this is for you.</p>
+    <section class="panel">
+      <div class="section-header">
+        <h2>Where Fashion Finds Its Match</h2>
+        <p class="section-intro">Visualize your wardrobe, share your style, and connect with your fashion twin — all in one secure platform built for real-world communities.</p>
+      </div>
+      <div class="pill">✨ Community-powered wardrobe</div>
+      <div class="pill">🔐 Trust-first sharing</div>
+    </section>
+
+    <section class="panel">
+      <div class="section-header">
+        <h2>A new way to experience fashion.</h2>
+        <p class="section-intro">Joda turns your wardrobe into a living, shareable ecosystem. Whether you're looking for fresh styles, want to earn from what you already own, or simply love sustainable fashion — this is for you.</p>
+      </div>
       <div class="cards">
         <div class="card">👗 Digitize your wardrobe with AI-powered tagging</div>
         <div class="card">🤝 Share or rent within trusted circles — friends, campuses, communities</div>
@@ -477,9 +495,10 @@
       </div>
     </section>
 
-    <section>
-      <div class="label green">🟢 How It Works</div>
-      <h2>Simple steps to start sharing</h2>
+    <section class="panel">
+      <div class="section-header">
+        <h2>Simple steps to start sharing</h2>
+      </div>
       <div class="steps">
         <div class="card">
           <div class="step-number">1</div>
@@ -499,9 +518,10 @@
       </div>
     </section>
 
-    <section>
-      <div class="label blue">🔵 Why People Love Joda</div>
-      <h2>Stories from our first members</h2>
+    <section class="panel">
+      <div class="section-header">
+        <h2>Stories from our first members</h2>
+      </div>
       <div class="quotes">
         <blockquote>“I finally get to earn from clothes I barely used.”</blockquote>
         <blockquote>“It feels safe because I can restrict sharing to my apartment community.”</blockquote>
@@ -510,9 +530,10 @@
       <p class="section-intro">Add real user stories as you gather testimonials.</p>
     </section>
 
-    <section>
-      <div class="label brown">🟤 Featured Benefits</div>
-      <h2>Designed for trust, ease, and sustainability</h2>
+    <section class="panel">
+      <div class="section-header">
+        <h2>Designed for trust, ease, and sustainability</h2>
+      </div>
       <div class="benefits">
         <div class="benefit">🔒 Trust First<br>Verified profiles, optional deposits, and safe handover checklists.</div>
         <div class="benefit">🚚 Seamless Logistics<br>Pickup/drop partnerships and optional cleaning add-ons.</div>
@@ -521,51 +542,37 @@
       </div>
     </section>
 
-    <section id="waitlist">
-      <div class="label orange">🟠 Early Access Waitlist</div>
-      <div class="waitlist">
-        <div>
-          <h2>Be part of the first 1,000 members to try Joda.</h2>
-          <p>We’re launching city-by-city, starting with Bengaluru. Join the early access list to unlock priority invites, exclusive perks, and community access.</p>
-          <p class="pill">🎁 Priority invites • Exclusive perks • Community access</p>
-        </div>
-        <div class="hubspot-form">
-          <script src="https://js-na2.hsforms.net/forms/embed/244514378.js" defer></script>
-          <div class="hs-form-frame" data-region="na2" data-form-id="c18e0a1b-ad7b-47c6-8f74-aa1a2145c9f6" data-portal-id="244514378"></div>
-          <p class="consent">“No spam. You’ll only receive launch updates.”</p>
-        </div>
+    <section class="panel waitlist" id="waitlist">
+      <div class="section-header">
+        <h2>Be part of the first 1,000 members to try Joda.</h2>
+        <p class="section-intro">We’re launching city-by-city, starting with Bengaluru. Join the early access list to unlock priority invites, exclusive perks, and community access.</p>
       </div>
+      <div class="google-form">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6nzCVaQJiqXutFgKprYaJmwFRGhzp9lvEOIdJ04tdrGTyNw/viewform?embedded=true" width="640" height="971" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+      <p class="consent">“No spam. You’ll only receive launch updates.”</p>
     </section>
 
-    <section>
-      <div class="label purple">🟣 Customer Discovery Survey</div>
-      <div class="survey">
-        <div>
-          <h3>Help us shape the future of Joda.</h3>
-          <p>This 2-minute survey helps us build the right features for your community.</p>
-        </div>
-        <button class="btn secondary">👉 Take the 2-Minute Survey</button>
+    <section class="panel">
+      <div class="section-header">
+        <h2>Where fashion meets connection.</h2>
+        <p class="section-intro">Whether you’re a student, young professional, creator, or sustainability lover — Joda is built for communities that care.</p>
       </div>
-    </section>
-
-    <section>
-      <div class="label black">⚫ Community</div>
-      <h2>Where fashion meets connection.</h2>
-      <p class="section-intro">Whether you’re a student, young professional, creator, or sustainability lover — Joda is built for communities that care.</p>
       <div class="community-list">
         <div class="card">College campuses</div>
         <div class="card">Housing societies</div>
         <div class="card">Corporate groups</div>
         <div class="card">Creator & influencer circles</div>
       </div>
-      <div class="cta-group" style="margin-top:18px;">
+      <div class="cta-group">
         <button class="btn secondary">Partner with Us</button>
       </div>
     </section>
 
-    <section>
-      <div class="label orange">🟥 FAQ</div>
-      <h2>Questions, answered.</h2>
+    <section class="panel">
+      <div class="section-header">
+        <h2>Questions, answered.</h2>
+      </div>
       <div class="faq">
         <div class="faq-item">
           <h3>Is sharing safe?</h3>
