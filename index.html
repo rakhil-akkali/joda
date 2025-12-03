@@ -302,14 +302,13 @@
 
     .waitlist {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
-      align-items: center;
-      padding: 32px;
-      border-radius: 20px;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
     }
 
     form {
@@ -530,13 +529,13 @@
       </div>
     </section>
 
-    <section class="panel" id="waitlist">
-      <div class="waitlist">
-        <div class="section-header">
-          <h2>Be part of the first 1,000 members to try Joda.</h2>
-          <p class="section-intro">We’re launching city-by-city, starting with Bengaluru. Join the early access list to unlock priority invites, exclusive perks, and community access.</p>
-        </div>
-        <form>
+    <section class="panel waitlist" id="waitlist">
+      <div class="section-header">
+        <h2>Be part of the first 1,000 members to try Joda.</h2>
+        <p class="section-intro">We’re launching city-by-city, starting with Bengaluru. Join the early access list to unlock priority invites, exclusive perks, and community access.</p>
+      </div>
+      <form>
+        <div class="form-grid">
           <div>
             <label for="name">Name</label>
             <input id="name" type="text" name="name" placeholder="Enter your name" required>
@@ -560,12 +559,12 @@
               <option>Other</option>
             </select>
           </div>
-          <div class="cta-group">
-            <button class="btn primary" type="submit">Join the Waitlist</button>
-          </div>
-          <p class="consent">“No spam. You’ll only receive launch updates.”</p>
-        </form>
-      </div>
+        </div>
+        <div class="cta-group">
+          <button class="btn primary" type="submit">Join the Waitlist</button>
+        </div>
+        <p class="consent">“No spam. You’ll only receive launch updates.”</p>
+      </form>
     </section>
 
     <section class="panel">
