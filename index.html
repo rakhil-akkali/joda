@@ -87,7 +87,9 @@
     main {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 32px 24px 64px;
+      padding: 40px 24px 72px;
+      display: grid;
+      gap: 72px;
     }
 
     .hero {
@@ -150,7 +152,7 @@
 
     .video-embed {
       position: relative;
-      margin-top: 20px;
+      margin-top: 24px;
       width: 100%;
       border-radius: 16px;
       overflow: hidden;
@@ -172,7 +174,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 12px;
-      margin-top: 16px;
+      margin-top: 18px;
     }
 
     .badge {
@@ -185,7 +187,8 @@
     }
 
     section {
-      margin-top: 56px;
+      display: grid;
+      gap: 20px;
     }
 
     h2 {
@@ -197,13 +200,18 @@
     .section-intro {
       color: #4b5563;
       max-width: 760px;
+      line-height: 1.7;
+    }
+
+    .section-header {
+      display: grid;
+      gap: 12px;
     }
 
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 16px;
-      margin-top: 24px;
     }
 
     .card {
@@ -239,7 +247,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 16px;
-      margin-top: 24px;
     }
 
     .step-number {
@@ -258,7 +265,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 16px;
-      margin-top: 24px;
     }
 
     blockquote {
@@ -274,8 +280,7 @@
     .benefits {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px;
-      margin-top: 24px;
+      gap: 16px;
     }
 
     .benefit {
@@ -353,15 +358,13 @@
     .community-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px;
-      margin-top: 16px;
+      gap: 16px;
     }
 
     .faq {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 12px;
-      margin-top: 16px;
+      gap: 16px;
     }
 
     .faq-item {
@@ -510,8 +513,10 @@
     <section id="waitlist">
       <div class="waitlist">
         <div>
-          <h2>Be part of the first 1,000 members to try Joda.</h2>
-          <p>We’re launching city-by-city, starting with Bengaluru. Join the early access list to unlock priority invites, exclusive perks, and community access.</p>
+          <div class="section-header">
+            <h2>Be part of the first 1,000 members to try Joda.</h2>
+            <p class="section-intro">We’re launching city-by-city, starting with Bengaluru. Join the early access list to unlock priority invites, exclusive perks, and community access.</p>
+          </div>
           <p class="pill">🎁 Priority invites • Exclusive perks • Community access</p>
         </div>
         <div class="hubspot-form">
@@ -541,7 +546,7 @@
         <div class="card">Corporate groups</div>
         <div class="card">Creator & influencer circles</div>
       </div>
-      <div class="cta-group" style="margin-top:18px;">
+      <div class="cta-group">
         <button class="btn secondary">Partner with Us</button>
       </div>
     </section>
