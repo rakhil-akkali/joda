@@ -87,33 +87,35 @@
     main {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 40px 24px 72px;
+      padding: 48px 24px 88px;
       display: grid;
-      gap: 72px;
+      gap: 56px;
     }
 
     .hero {
       display: grid;
       gap: 24px;
-      padding: 44px 40px;
+      padding: 52px 48px;
       border: 1px solid #e5e7eb;
       border-radius: 24px;
       background: #ffffff;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
     }
 
-      .hero h1 {
-        font-size: clamp(36px, 6vw, 56px);
-        margin: 0;
-        line-height: 1.12;
-      }
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 58px);
+      margin: 0;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
 
-      .hero p {
-        margin: 10px 0 0;
-        color: #4b5563;
-        font-size: 18px;
-        max-width: 760px;
-      }
+    .hero p {
+      margin: 8px 0 0;
+      color: #4b5563;
+      font-size: 18px;
+      max-width: 780px;
+      line-height: 1.7;
+    }
 
     .cta-group {
       display: flex;
@@ -190,19 +192,33 @@
       gap: 20px;
     }
 
+    .panel {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      padding: 36px 38px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+      display: grid;
+      gap: 20px;
+    }
+
     h2 {
       font-size: 30px;
       margin: 0;
       color: var(--gray-900);
+      letter-spacing: -0.01em;
     }
 
     h3 {
       margin: 0;
       color: var(--gray-900);
+      letter-spacing: -0.01em;
     }
 
     p {
       margin: 0;
+      color: #4b5563;
+      line-height: 1.7;
     }
 
     .section-intro {
@@ -213,7 +229,8 @@
 
     .section-header {
       display: grid;
-      gap: 12px;
+      gap: 10px;
+      max-width: 880px;
     }
 
     .cards {
@@ -280,17 +297,17 @@
       border: 1px solid #e5e7eb;
     }
 
-      .waitlist {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 24px;
-        align-items: center;
-        padding: 32px;
-        border-radius: 20px;
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-      }
+    .waitlist {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      align-items: center;
+      padding: 32px;
+      border-radius: 20px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    }
 
     form {
       display: grid;
@@ -388,18 +405,19 @@
       border-bottom: 1px dotted #d1d5db;
     }
 
-      .pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 12px;
-        border-radius: 999px;
-        background: #f3f4f6;
-        border: 1px solid #e5e7eb;
-        font-weight: 600;
-        color: var(--gray-900);
-        margin-top: 12px;
-      }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-top: 12px;
+      line-height: 1.5;
+    }
 
     @media (max-width: 640px) {
       header {
@@ -439,7 +457,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="panel">
       <div class="section-header">
         <h2>Where Fashion Finds Its Match</h2>
         <p class="section-intro">Visualize your wardrobe, share your style, and connect with your fashion twin — all in one secure platform built for real-world communities.</p>
@@ -448,7 +466,7 @@
       <div class="pill">🔐 Trust-first sharing</div>
     </section>
 
-    <section>
+    <section class="panel">
       <div class="section-header">
         <h2>A new way to experience fashion.</h2>
         <p class="section-intro">Joda turns your wardrobe into a living, shareable ecosystem. Whether you're looking for fresh styles, want to earn from what you already own, or simply love sustainable fashion — this is for you.</p>
@@ -462,7 +480,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="panel">
       <div class="section-header">
         <h2>Simple steps to start sharing</h2>
       </div>
@@ -485,7 +503,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="panel">
       <div class="section-header">
         <h2>Stories from our first members</h2>
       </div>
@@ -497,7 +515,7 @@
       <p class="section-intro">Add real user stories as you gather testimonials.</p>
     </section>
 
-    <section>
+    <section class="panel">
       <div class="section-header">
         <h2>Designed for trust, ease, and sustainability</h2>
       </div>
@@ -509,7 +527,7 @@
       </div>
     </section>
 
-    <section id="waitlist">
+    <section id="waitlist" class="panel">
       <div class="waitlist">
         <div>
           <div class="section-header">
@@ -526,7 +544,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="panel">
       <div class="survey">
         <div>
           <h3>Help us shape the future of Joda.</h3>
@@ -536,7 +554,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="panel">
       <div class="section-header">
         <h2>Where fashion meets connection.</h2>
         <p class="section-intro">Whether you’re a student, young professional, creator, or sustainability lover — Joda is built for communities that care.</p>
@@ -552,7 +570,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="panel">
       <div class="section-header">
         <h2>Questions, answered.</h2>
       </div>
